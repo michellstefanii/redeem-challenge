@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# Resgates - O Desafio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Proposta
 
-Currently, two official plugins are available:
+Este desafio consiste no desenvolvimento de uma aplicação web para visualizar páginas de resgates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Uma **página de resgate** é um formulário onde os usuários podem preencher seus dados para envio e aprovação.
 
-## Expanding the ESLint configuration
+Após a aprovação do resgate, o usuário receberá os itens relacionados ao resgate de acordo com as informações preenchidas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Premissas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Páginas de resgate podem ficar **inativas**.
+- Produtos podem ser **opcionais**, mas pelo menos um deve ser selecionado.
+- Produtos opcionais devem ser exibidos na tela como opções para resgate.
+- Páginas de resgate podem (ou não) ter **variações de tamanhos** (de acordo com o produto selecionado).
+- Páginas de resgate podem (ou não) ter **perguntas extras**.
+
+## Solução
+
+Com base nas premissas citadas, a aplicação foi desenvolvida utilizando **React** e **Material UI** para a criação das telas da página de resgate.
+
+## Tecnologias Utilizadas
+
+- **React** 19
+- **Material UI** 6
+- **React Hook Form** para manipulação de formulários
+- **Yup** para validação de dados
+- **React Router Dom** para navegação
+- **TanStack Query (React Query)** para gerenciamento de estado assíncrono
+- **Axios** para requisições HTTP
+- **Day.js** para manipulação de datas
+
+## Como Executar o Projeto
+
+### 1. Instalar Dependências
+
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Rodar o Projeto em Modo de Desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm run dev
 ```
+
+### 3. Construir para Produção
+
+```sh
+npm run build
+```
+
+### 4. Visualizar a Aplicação
+
+- Para acessar um resgate **ativo**:
+
+  - [http://localhost:5173/5c7e9bc8-e063-4d86-8e2c-eccce6f3ee1c](http://localhost:5173/5c7e9bc8-e063-4d86-8e2c-eccce6f3ee1c)
+
+- Para acessar um resgate **inativo**:
+  - [http://localhost:5173/dba7e38a-c03f-47f4-a1f9-5bf21c6624ad](http://localhost:5173/dba7e38a-c03f-47f4-a1f9-5bf21c6624ad)
+
+## Autor
+
+Michel S.
