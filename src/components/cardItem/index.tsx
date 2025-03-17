@@ -33,7 +33,11 @@ const CardItem: FC<CardItemProps> = ({ image, title, checkboxProps }) => {
       </CardActions>
       <CardMedia
         className="card-media"
-        onClick={() => checkboxProps?.onChange()}
+        onClick={(event) => {
+          if (checkboxProps?.onChange) {
+            checkboxProps.onChange(event as never, !checkboxProps.checked);
+          }
+        }}
         component="img"
         sx={{
           height: 260,

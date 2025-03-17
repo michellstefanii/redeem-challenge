@@ -5,7 +5,6 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  FormHelperText,
 } from "@mui/material";
 import { MainFont } from "~/components/typography";
 import Grid from "@mui/material/Grid2";
@@ -37,7 +36,7 @@ const SizeSelection: React.FC<SizeSelectionProps> = ({
         Tamanhos
       </MainFont>
       <Grid sx={{ mt: 4 }} container spacing={4}>
-        {filteredItems.map((item, i) => (
+        {filteredItems.map((item) => (
           <Grid size={gridSize} key={item.customer_product_id}>
             <FormControl error={!!errors?.items} fullWidth>
               <InputLabel sx={{ marginLeft: -1.5 }}>

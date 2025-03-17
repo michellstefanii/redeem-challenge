@@ -27,10 +27,7 @@ export function StepThree({ redeemData, form }: IStepThree) {
     formState: { errors },
     clearErrors,
     trigger,
-    getValues,
   } = form;
-
-  console.log(getValues());
 
   const selectedItemsId = watch("items");
   const selectedItems = redeemData.items.filter((item) =>

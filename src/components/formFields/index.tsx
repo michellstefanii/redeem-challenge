@@ -51,6 +51,8 @@ export const FormField = ({
 }: IFormFieldProps) => (
   <Grid key={name} size={gridSize}>
     <Controller
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-expect-error
       name={name}
       control={control}
       render={({ field }) => {
@@ -83,7 +85,13 @@ export const FormField = ({
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker
                   label={label}
-                  value={field.value ? dayjs(field.value) : null}
+                  value={
+                    field.value &&
+                    (typeof field.value === "string" ||
+                      field.value instanceof Date)
+                      ? dayjs(field.value)
+                      : null
+                  }
                   format="DD/MM/YYYY"
                   onChange={(date) =>
                     onChange
