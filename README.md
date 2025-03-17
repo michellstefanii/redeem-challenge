@@ -55,10 +55,10 @@ npm run build
 
 - Para acessar um resgate **ativo**:
 
-  - [http://localhost:5173/5c7e9bc8-e063-4d86-8e2c-eccce6f3ee1c](http://localhost:5173/5c7e9bc8-e063-4d86-8e2c-eccce6f3ee1c)
+  - [https://redeem-challenge.onrender.com/5c7e9bc8-e063-4d86-8e2c-eccce6f3ee1c](https://redeem-challenge.onrender.com/5c7e9bc8-e063-4d86-8e2c-eccce6f3ee1c)
 
 - Para acessar um resgate **inativo**:
-  - [http://localhost:5173/dba7e38a-c03f-47f4-a1f9-5bf21c6624ad](http://localhost:5173/dba7e38a-c03f-47f4-a1f9-5bf21c6624ad)
+  - [https://redeem-challenge.onrender.com/dba7e38a-c03f-47f4-a1f9-5bf21c6624ad](https://redeem-challenge.onrender.com/dba7e38a-c03f-47f4-a1f9-5bf21c6624ad)
 
 ## Autor
 
