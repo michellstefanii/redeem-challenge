@@ -1,0 +1,150 @@
+.redeem-loading {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.redeem-steps-container {
+  padding-top: 80px;
+  background-color: var(--background-color, #ffffff);
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.form-container {
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.button-container-mobile {
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.step-container {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.content-container {
+  max-height: 700px;
+  overflow: auto;
+  display: flex;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .step-container {
+    padding: 40px 20px !important;
+    padding-top: 40px;
+  }
+
+  .content-container {
+    max-height: none;
+    padding: 0px !important;
+    overflow: hidden;
+  }
+
+  .item-container {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 200px;
+}
+
+.notfound-logo {
+  margin-bottom: 50px;
+}
+
+.responsive-title {
+  font-size: 40px !important;
+}
+
+@media (max-width: 768px) {
+  .responsive-title {
+    font-size: 28px !important;
+  }
+}
+
+.responsive-body {
+  font-size: 20px !important;
+}
+
+@media (max-width: 768px) {
+  .responsive-body {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .notfound-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 0px;
+    padding: 20px;
+  }
+}
+
+.two-header-font {
+  font-size: 20px !important;
+  text-align: center !important;
+}
+
+.card-item {
+  max-width: 292px;
+}
+
+.card-media {
+  width: 260px;
+}
+
+@media (max-width: 768px) {
+  .two-header-font {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .card-item {
+    max-width: 100%;
+  }
+
+  .card-media {
+    min-width: 100% !important;
+  }
+}
